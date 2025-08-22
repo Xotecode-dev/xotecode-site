@@ -28,7 +28,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="text-2xl font-bold text-gradient">
-              <img src="../../src/assets/img/logo fundo transparente.png" alt="Codegg Logo" className="h-10 w-auto" />
+              <img src="../../src/assets/img/logo com fundo transparente texto ao lado.png" alt="Xotecode Logo" className="h-20 w-auto" />
             </div>
           </div>
 
@@ -68,13 +68,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 py-4">
+          <div className="md:hidden border-t border-gray-100 py-4">
             <nav className="flex flex-col space-y-4">
               {['inicio', 'servicos', 'sobre', 'contato'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="text-gray-700 hover:text-[#3a8f94] transition-colors duration-200 font-medium capitalize text-left px-4"
+                  className="text-white hover:text-[#3a8f94] transition-colors duration-200 font-medium capitalize text-left px-4"
                 >
                   {item === 'inicio' ? 'Início' : item === 'servicos' ? 'Serviços' : item === 'sobre' ? 'Sobre Nós' : 'Contato'}
                 </button>

@@ -10,10 +10,10 @@ export default function ServicesSection() {
       features: ['ERP Customizado', 'CRM Integrado', 'APIs Robustas', 'Integrações']
     },
     {
-      icon: Globe,
-      title: 'Sites Corporativos',
-      description: 'Sites responsivos, otimizados para SEO e focados na experiência do usuário para fortalecer sua presença digital.',
-      features: ['Design Responsivo', 'SEO Otimizado', 'CMS Intuitivo', 'Performance']
+      icon: Megaphone,
+      title: 'Landing Pages',
+      description: 'Páginas de conversão otimizadas para campanhas de marketing e geração de leads qualificados.',
+      features: ['Alta Conversão', 'A/B Testing', 'Lead Capture', 'Analytics']
     },
     {
       icon: ShoppingCart,
@@ -22,10 +22,10 @@ export default function ServicesSection() {
       features: ['Gateway Pagamento', 'Analytics Avançado', 'Gestão Estoque', 'Marketing']
     },
     {
-      icon: Megaphone,
-      title: 'Landing Pages',
-      description: 'Páginas de conversão otimizadas para campanhas de marketing e geração de leads qualificados.',
-      features: ['Alta Conversão', 'A/B Testing', 'Lead Capture', 'Analytics']
+      icon: ShoppingCart,
+      title: 'Branding',
+      description: 'Criação e gestão de identidade de marca para fortalecer o posicionamento da sua empresa no mercado, conectando propósito, valores e estética visual de forma consistente.',
+      features: ['Identidade Visual', 'Estratégia de Posicionamento', 'Manual de Marca', 'Comunicação Consistente']
     }
   ];
 
@@ -46,16 +46,16 @@ export default function ServicesSection() {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-lg">
+            <div key={index} className="flex flex-col items-center card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-lg">
               <div className="w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-[#3a8f94] to-[#80deac] flex items-center justify-center">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
               
-              <h3 className="text-xl font-bold text-[#023047] mb-4">
+              <h3 className="text-center text-xl font-bold text-[#023047] mb-4">
                 {service.title}
               </h3>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-center text-gray-600 mb-6 leading-relaxed">
                 {service.description}
               </p>
 

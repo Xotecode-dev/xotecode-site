@@ -22,11 +22,11 @@ html {
 }
 
 .gradient-secondary {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-dark));
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -56,7 +56,7 @@ html {
   padding: 5rem 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 80vw) {
   .section-padding {
     padding: 3rem 0;
   }
@@ -115,16 +115,5 @@ html {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
-}
-
-
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }

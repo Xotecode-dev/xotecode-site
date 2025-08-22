@@ -36,7 +36,7 @@ export default function ContactSection() {
 
       // Enviar email de notificação
       await SendEmail({
-        to: 'codegg.devs@gmail.com',
+        to: 'xotecode@gmail.com',
         subject: `Novo contato - ${formData.tipo_projeto}`,
         body: `
           Nome: ${formData.nome}
@@ -68,7 +68,7 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'codegg.devs@gmail.com',
+      value: 'xotecode@gmail.com',
       color: '#3a8f94'
     },
     {

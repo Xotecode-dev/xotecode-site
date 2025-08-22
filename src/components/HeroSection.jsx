@@ -10,6 +10,9 @@ export default function HeroSection() {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 gradient-primary opacity-95"></div>
+
+      <div className="absolute inset-0">
+      </div>
       
       {/* Geometric Background Elements */}
       <div className="absolute inset-0">
@@ -22,7 +25,7 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            CODEGG
+            XOTECODE
             <span className="block text-[#80deac] mt-2">
               Ampliando horizontes
             </span>

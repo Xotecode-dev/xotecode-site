@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Code2, LifeBuoy } from 'lucide-react';
+import { Search, Code2, LifeBuoy, Headphones } from 'lucide-react';
 
 export default function MethodologySection() {
   const steps = [
@@ -16,7 +16,7 @@ export default function MethodologySection() {
       description: 'Utilizamos metodologias ágeis para entregar resultados rapidamente, com iterações constantes e feedback contínuo.'
     },
     {
-      icon: LifeBuoy,
+      icon: Headphones,
       number: '03',
       title: 'Suporte Contínuo',
       description: 'Oferecemos manutenção, atualizações e suporte técnico especializado para garantir o sucesso a longo prazo.'
@@ -24,7 +24,7 @@ export default function MethodologySection() {
   ];
 
   return (
-    <section id="sobre" className="section-padding bg-white">
+    <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#023047] mb-6">
@@ -40,10 +40,6 @@ export default function MethodologySection() {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               {/* Connection Line (desktop only) */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-[#3a8f94] to-[#80deac] transform translate-x-0 -translate-y-1/2 z-0"></div>
-              )}
-              
               <div className="relative z-10 text-center">
                 {/* Step Number */}
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#3a8f94] to-[#80deac] text-white font-bold text-xl mb-6 shadow-lg">
