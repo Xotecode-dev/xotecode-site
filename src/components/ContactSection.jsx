@@ -31,10 +31,9 @@ export default function ContactSection() {
     setSubmitMessage('');
 
     try {
-      // Salvar contato no banco
+      console.log('Form Data:', formData);
       await Contact.create(formData);
 
-      // Enviar email de notificação
       await SendEmail({
         to: 'xotecode@gmail.com',
         subject: `Novo contato - ${formData.tipo_projeto}`,
@@ -88,7 +87,6 @@ export default function ContactSection() {
   return (
     <section id="contato" className="section-padding bg-gradient-to-br from-[#023047] to-[#0d1b2a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Vamos Conversar Sobre Sua Solução Tecnológica?
@@ -100,7 +98,6 @@ export default function ContactSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Info */}
           <div>
             <h3 className="text-2xl font-bold text-white mb-8">
               Entre em Contato
@@ -123,7 +120,6 @@ export default function ContactSection() {
               ))}
             </div>
 
-            {/* Additional Info */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h4 className="text-white font-semibold mb-4">Horário de Atendimento</h4>
               <div className="space-y-2 text-gray-300 text-sm">
@@ -134,7 +130,6 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">

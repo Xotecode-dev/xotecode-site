@@ -5,7 +5,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579406290181', label: 'Facebook' },
     { icon: Linkedin, href: 'https://www.linkedin.com/company/xotecode', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com/Xotecode', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/Xotecode-dev', label: 'GitHub' },
     { icon: Instagram, href: 'https://www.instagram.com/xotecode', label: 'Instagram' },
     // { icon: Twitter, href: '#', label: 'Twitter' }
   ];
@@ -14,12 +14,10 @@ export default function Footer() {
     <footer className="bg-[#0d1b2a] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          {/* Logo */}
           <div className="text-3xl font-bold text-gradient mb-6">
             XOTECODE
           </div>
           
-          {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-8">
             {socialLinks.map((social, index) => (
               <a
@@ -34,7 +32,6 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Copyright */}
           <div className="border-t border-gray-700 pt-8">
             <p className="text-gray-400 text-sm">
               © 2025 XOTECODE. Todos os direitos reservados.

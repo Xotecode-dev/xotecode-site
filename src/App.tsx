@@ -16,8 +16,8 @@ export default function App() {
       <HeroSection />
       <ServicesSection />
       <WhyChooseUsSection />
-      <WhoAreWe />
       <MethodologySection />
+      <WhoAreWe />
       <ContactSection />
       <Footer />
     </>

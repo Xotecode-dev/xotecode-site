@@ -32,7 +32,6 @@ export default function ServicesSection() {
   return (
     <section id="servicos" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#023047] mb-6">
             Nossos Serviços
@@ -43,7 +42,6 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="flex flex-col items-center card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-lg">

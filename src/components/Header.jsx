@@ -25,14 +25,12 @@ export default function Header() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <div className="text-2xl font-bold text-gradient">
               <img src="../../src/assets/img/logo com fundo transparente texto ao lado.png" alt="Xotecode Logo" className="h-20 w-auto" />
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {['inicio', 'servicos', 'sobre', 'contato'].map((item) => (
               <button
@@ -45,7 +43,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection('contato')}
@@ -55,7 +52,6 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -66,7 +62,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-gray-100 py-4">
             <nav className="flex flex-col space-y-4">

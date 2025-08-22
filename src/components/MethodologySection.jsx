@@ -39,19 +39,15 @@ export default function MethodologySection() {
         <div className="grid md:grid-cols-3 gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              {/* Connection Line (desktop only) */}
               <div className="relative z-10 text-center">
-                {/* Step Number */}
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#3a8f94] to-[#80deac] text-white font-bold text-xl mb-6 shadow-lg">
                   {step.number}
                 </div>
                 
-                {/* Icon */}
                 <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-[#f7eccf] flex items-center justify-center shadow-md">
                   <step.icon className="w-10 h-10 text-[#3a8f94]" />
                 </div>
                 
-                {/* Content */}
                 <h3 className="text-2xl font-bold text-[#023047] mb-4">
                   {step.title}
                 </h3>
