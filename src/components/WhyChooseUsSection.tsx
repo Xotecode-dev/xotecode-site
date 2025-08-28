@@ -1,4 +1,3 @@
-import React from 'react';
 import { Zap, TrendingDown, Settings, Link as LinkIcon, Headphones } from 'lucide-react';
 
 export default function WhyChooseUsSection() {

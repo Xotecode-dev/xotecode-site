@@ -1,5 +1,4 @@
-import React from 'react';
-import { Facebook, Linkedin, Github, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Linkedin, Github, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const socialLinks = [

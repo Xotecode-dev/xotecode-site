@@ -1,5 +1,4 @@
-import React from 'react';
-import { Search, Code2, LifeBuoy, Headphones } from 'lucide-react';
+import { Search, Code2, Headphones } from 'lucide-react';
 
 export default function MethodologySection() {
   const steps = [

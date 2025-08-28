@@ -1,5 +1,4 @@
-import React from 'react';
-import { Code, Globe, ShoppingCart, Megaphone } from 'lucide-react';
+import { Code, ShoppingCart, Megaphone } from 'lucide-react';
 
 export default function ServicesSection() {
   const services = [

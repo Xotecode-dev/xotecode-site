@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-// import { Contact } from '../entities/Contact';
+import { useState } from 'react';
+// import { Contact } from './entities/Contact.json';
 // import { SendEmail } from '../integrations/Core';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -18,35 +18,45 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
-  const handleInputChange = (field, value) => {
+  const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage('');
 
     try {
       console.log('Form Data:', formData);
-      await Contact.create(formData);
+      const URL = import.meta.env.VITE_API_URL;
 
-      await SendEmail({
-        to: 'xotecode@gmail.com',
-        subject: `Novo contato - ${formData.tipo_projeto}`,
-        body: `
-          Nome: ${formData.nome}
-          Empresa: ${formData.empresa}
-          Email: ${formData.email}
-          Tipo de Projeto: ${formData.tipo_projeto}
-          
-          Descrição:
-          ${formData.descricao}
-        `
-      });
+      const res = await fetch(
+        `${URL}/api_do_email`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Body: JSON.stringify({
+              to: 'xotecode@gmail.com',
+              subject: `Novo contato - ${formData.tipo_projeto}`,
+              body: `
+                Nome: ${formData.nome}
+                Empresa: ${formData.empresa}
+                Email: ${formData.email}
+                Tipo de Projeto: ${formData.tipo_projeto}
+                
+                Descrição:
+                ${formData.descricao}
+              `
+            }),
+          }
+        }
+      );
+
+      console.log('Response:', res);
 
       setSubmitMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.');
       setFormData({

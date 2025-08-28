@@ -1,4 +1,3 @@
-import React from 'react';
 import { TrendingUp, Users, Award, Clock } from 'lucide-react';
 
 export default function StatsSection() {

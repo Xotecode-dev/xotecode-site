@@ -1,8 +1,7 @@
-import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
 
 export default function HeroSection() {
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
