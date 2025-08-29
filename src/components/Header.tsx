@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from '../assets/img/logo com fundo transparente texto ao lado.png';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,13 +22,13 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#070031] backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-[#070031] backdrop-blur-md shadow-lg' : 'lg:bg-transparent md:bg-transparent backdrop-blur-md shadow-md'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           <div className="flex-shrink-0">
             <div className="text-2xl font-bold text-gradient">
-              <img src="../../src/assets/img/logo com fundo transparente texto ao lado.png" alt="Xotecode Logo" className="h-20 w-auto" />
+              <img src={Logo} alt="Xotecode Logo" className="h-20 w-auto" />
             </div>
           </div>
 
@@ -55,7 +56,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-[#3a8f94] p-2"
+              className="text-white hover:text-[#8a8f94] p-2"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

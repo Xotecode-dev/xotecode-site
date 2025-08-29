@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 // import { Contact } from './entities/Contact.json';
 // import { SendEmail } from '../integrations/Core';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
@@ -25,39 +26,25 @@ export default function ContactSection() {
     }));
   };
 
-  const handleSubmit = async (e: any) => {
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage('');
 
     try {
-      console.log('Form Data:', formData);
-      const URL = import.meta.env.VITE_API_URL;
-
-      const res = await fetch(
-        `${URL}/api_do_email`,
+      await emailjs.send(
+        'service_34crrw6', // substitua pelo seu serviceID
+        'template_3x5napf', // substitua pelo seu templateID
         {
-          headers: {
-            "Content-Type": "application/json",
-            Body: JSON.stringify({
-              to: 'xotecode@gmail.com',
-              subject: `Novo contato - ${formData.tipo_projeto}`,
-              body: `
-                Nome: ${formData.nome}
-                Empresa: ${formData.empresa}
-                Email: ${formData.email}
-                Tipo de Projeto: ${formData.tipo_projeto}
-                
-                Descrição:
-                ${formData.descricao}
-              `
-            }),
-          }
-        }
+          nome: formData.nome,
+          empresa: formData.empresa,
+          email: formData.email,
+          tipo_projeto: formData.tipo_projeto,
+          descricao_projeto: formData.descricao,
+        },
+        'mtmZ4amUrv_PzGCcs' // substitua pelo seu userID
       );
-
-      console.log('Response:', res);
-
       setSubmitMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.');
       setFormData({
         nome: '',
@@ -69,7 +56,6 @@ export default function ContactSection() {
     } catch (error) {
       setSubmitMessage('Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.');
     }
-
     setIsSubmitting(false);
   };
 
