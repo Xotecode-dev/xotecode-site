@@ -6,7 +6,6 @@ export default function Footer() {
     { icon: Linkedin, href: 'https://www.linkedin.com/company/xotecode', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/Xotecode-dev', label: 'GitHub' },
     { icon: Instagram, href: 'https://www.instagram.com/xotecode', label: 'Instagram' },
-    // { icon: Twitter, href: '#', label: 'Twitter' }
   ];
 
   return (

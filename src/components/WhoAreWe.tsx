@@ -52,7 +52,7 @@ export default function WhoAreWe() {
           <div className="bg-white/80 rounded-2xl shadow-lg p-8 md:p-12 mb-8 border border-[#80deac]/30">
             <h3 className="text-2xl font-bold mb-4 text-[#3a8f94]">Apresentação</h3>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              Somos uma empresa cearense de tecnologia, especializada em transformar ideias em soluções digitais. Atuamos como fábrica de software, desenvolvendo Softwares Personalizados, Landing Pages, E-commerce e Branding para empresas e organizações que buscam inovação, eficiência e presença digital.
+              Somos uma empresa cearense de tecnologia, especializada em transformar ideias em soluções digitais. Atuamos como uma software house, desenvolvendo Softwares Personalizados, Landing Pages, E-commerce e Branding para empresas e organizações que buscam inovação, eficiência e presença digital.
               <br /><br />
               Nosso primeiro grande projeto foi o <span className="font-bold text-[#f27d13]">SIGEN (Sistema Integrado de Gestão de Endemias)</span>, que nasceu do propósito de unir tecnologia e saúde para preservar vidas, mostrando desde o início nossa vocação em usar a tecnologia como ferramenta de impacto social.
             </p>

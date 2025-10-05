@@ -34,8 +34,8 @@ export default function ContactSection() {
 
     try {
       await emailjs.send(
-        'service_34crrw6', // substitua pelo seu serviceID
-        'template_3x5napf', // substitua pelo seu templateID
+        'service_34crrw6',
+        'template_3x5napf',
         {
           nome: formData.nome,
           empresa: formData.empresa,
@@ -43,7 +43,7 @@ export default function ContactSection() {
           tipo_projeto: formData.tipo_projeto,
           descricao_projeto: formData.descricao,
         },
-        'mtmZ4amUrv_PzGCcs' // substitua pelo seu userID
+        'mtmZ4amUrv_PzGCcs'
       );
       setSubmitMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.');
       setFormData({

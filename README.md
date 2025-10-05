@@ -1,69 +1,79 @@
-# React + TypeScript + Vite
+# XOTECODE — Site (Landing Page)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém a landing page da XOTECODE — uma software house que oferece desenvolvimento de software sob medida, landing pages, e-commerce e serviços de branding.
 
-Currently, two official plugins are available:
+O objetivo do projeto é apresentar informações institucionais, portfólio de serviços e meios de contato para clientes e potenciais parceiros.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Visão geral
 
-## Expanding the ESLint configuration
+- Tipo: Landing page estática construída com React + TypeScript e Vite.
+- Uso: apresentação institucional e geração de leads (formulário de contato integrado).
+- Público-alvo: empreendedores, empresas e organizações que buscam desenvolvimento de soluções digitais.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Principais funcionalidades
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Seções informativas: quem somos, serviços, metodologia, diferenciais e estatísticas.
+- Formulário de contato (integração com EmailJS).
+- Componentes reutilizáveis e estilização com Tailwind CSS.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Tecnologias
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Vite
+- React
+- TypeScript
+- Tailwind CSS
+
+## Estrutura do projeto (resumo)
+
+- `public/` — arquivos estáticos públicos.
+- `src/` — código-fonte da aplicação.
+- `src/components/` — componentes de UI e seções (Header, Hero, Services, Contact, Footer, etc.).
+- `src/assets/` — imagens e logos.
+- `src/lib/` — utilitários e helpers.
+- `index.html`, `vite.config.ts`, `package.json` — configuração do projeto.
+
+## Executando localmente
+
+Usar Node.js LTS (18.x ou superior) e npm ou pnpm.
+
+No Windows PowerShell:
+
+```powershell
+# instalar dependências
+npm install
+
+# rodar em modo de desenvolvimento (HMR)
+npm run dev
+
+# compilar para produção
+npm run build
+
+# pré-visualizar o build (opcional)
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Variáveis de ambiente / integração de e-mail
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+O formulário de contato no `src/components/ContactSection.tsx` usa uma integração de terceiros (por exemplo, EmailJS). Para não expor chaves no código, configure variáveis de ambiente em um arquivo local (ex.: `.env`) ou no painel da plataforma de hospedagem:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `VITE_EMAILJS_SERVICE_ID`
+- `VITE_EMAILJS_TEMPLATE_ID`
+- `VITE_EMAILJS_PUBLIC_KEY`
+
+Observação: em Vite, variáveis que começam com `VITE_` são expostas ao cliente.
+
+## Edição de conteúdo
+
+- Textos e seções principais estão em `src/components/` — edite os componentes correspondentes para atualizar conteúdo ou a ordem das seções.
+- Imagens estão em `src/assets/img/`.
+
+## Contato
+
+- Email: xotecode@gmail.com
+- Site (quando em produção): coloque aqui a URL final de produção.
+
+## Licença
+
+Este repositório não tem uma licença especificada.
+
+---
