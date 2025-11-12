@@ -13,6 +13,7 @@ export default function ContactSection() {
     nome: '',
     empresa: '',
     email: '',
+    telefone: '',
     tipo_projeto: '',
     descricao: ''
   });
@@ -40,6 +41,7 @@ export default function ContactSection() {
           nome: formData.nome,
           empresa: formData.empresa,
           email: formData.email,
+          telefone: formData.telefone,
           tipo_projeto: formData.tipo_projeto,
           descricao_projeto: formData.descricao,
         },
@@ -50,6 +52,7 @@ export default function ContactSection() {
         nome: '',
         empresa: '',
         email: '',
+        telefone: '',
         tipo_projeto: '',
         descricao: ''
       });
@@ -168,6 +171,20 @@ export default function ContactSection() {
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className="w-full"
                   placeholder="seu@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Telefone (whatsapp) *
+                </label>
+                <Input
+                  type="telephone"
+                  required
+                  value={formData.telefone}
+                  onChange={(e) => handleInputChange('telefone', e.target.value)}
+                  className="w-full"
+                  placeholder="(88) 9 9999-9999"
                 />
               </div>
 
