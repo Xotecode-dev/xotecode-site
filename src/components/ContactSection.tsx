@@ -97,38 +97,6 @@ export default function ContactSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-8">
-              Entre em Contato
-            </h3>
-            
-            <div className="space-y-6 mb-12">
-              {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg"
-                    style={{ backgroundColor: `${info.color}20`, border: `1px solid ${info.color}` }}
-                  >
-                    <info.icon className="w-6 h-6" style={{ color: info.color }} />
-                  </div>
-                  <div>
-                    <div className="text-gray-400 text-sm">{info.label}</div>
-                    <div className="text-white font-semibold">{info.value}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <h4 className="text-white font-semibold mb-4">Horário de Atendimento</h4>
-              <div className="space-y-2 text-gray-300 text-sm">
-                <div>Segunda a Sexta: 8h às 18h</div>
-                <div>Sábado: 8h às 12h</div>
-                <div>Resposta em até 24 horas</div>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-white rounded-2xl p-8 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -244,6 +212,40 @@ export default function ContactSection() {
               )}
             </form>
           </div>
+          
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-8">
+              Entre em Contato
+            </h3>
+            
+            <div className="space-y-6 mb-12">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                  <div 
+                    className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg"
+                    style={{ backgroundColor: `${info.color}20`, border: `1px solid ${info.color}` }}
+                  >
+                    <info.icon className="w-6 h-6" style={{ color: info.color }} />
+                  </div>
+                  <div>
+                    <div className="text-gray-400 text-sm">{info.label}</div>
+                    <div className="text-white font-semibold">{info.value}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h4 className="text-white font-semibold mb-4">Horário de Atendimento</h4>
+              <div className="space-y-2 text-gray-300 text-sm">
+                <div>Segunda a Sexta: 8h às 18h</div>
+                <div>Sábado: 8h às 12h</div>
+                <div>Resposta em até 24 horas</div>
+              </div>
+            </div>
+          </div>
+
+          
         </div>
       </div>
     </section>

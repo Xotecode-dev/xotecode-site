@@ -1,24 +1,16 @@
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import WhyChooseUsSection from './components/WhyChooseUsSection';
-import MethodologySection from './components/MethodologySection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import WhoAreWe from './components/WhoAreWe';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
-
   return (
-    <>
-      <Header />
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <MethodologySection />
-      <WhoAreWe />
-      <ContactSection />
-      <Footer />
-    </>
+    <Router>
+      <ScrollToTop/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/cases" element={<ProjectsPage />} />
+      </Routes>
+    </Router>
   );
 }
