@@ -47,7 +47,7 @@ export const projects: Project[] = [
     ],
     testimonial: {
       text: 'O site transformou a forma como recebo meus pedidos. Agora meus clientes escolhem tudo com calma e eu recebo a lista pronta no WhatsApp, o que economiza muito tempo e profissionaliza meu negócio.',
-      author: 'Proprietária',
+      author: 'Antônia De Maria Paiva',
       position: 'Fundadora - Prata Lovers'
     }
   },

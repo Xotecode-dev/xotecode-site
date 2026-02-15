@@ -127,22 +127,24 @@ export default function CaseStudyModal({ project, isOpen, onClose }: CaseStudyMo
             </div>
 
             {/* Testimonial */}
-            <div className="bg-gradient-to-r from-[#3a8f94]/20 to-[#80deac]/20 rounded-2xl p-8 border border-[#80deac]/30">
-              <div className="flex items-center gap-2 mb-4">
-                <Users className="w-5 h-5 text-[#80deac]" />
-                <h3 className="text-lg font-semibold text-white">Depoimento do Cliente</h3>
-              </div>
-              <blockquote className="text-gray-200 text-lg mb-6 italic">
-                "{project.testimonial.text}"
-              </blockquote>
-              <div className="flex items-center justify-between border-t border-white/10 pt-4">
-                <div>
-                  <p className="font-semibold text-white">{project.testimonial.author}</p>
-                  <p className="text-gray-400 text-sm">{project.testimonial.position}</p>
+            {project.testimonial.text && (
+              <div className="bg-gradient-to-r from-[#3a8f94]/20 to-[#80deac]/20 rounded-2xl p-8 border border-[#80deac]/30">
+                <div className="flex items-center gap-2 mb-4">
+                  <Users className="w-5 h-5 text-[#80deac]" />
+                  <h3 className="text-lg font-semibold text-white">Depoimento do Cliente</h3>
                 </div>
-                <div className="text-[#f27d13] text-3xl">★★★★★</div>
+                <blockquote className="text-gray-200 text-lg mb-6 italic">
+                  "{project.testimonial.text}"
+                </blockquote>
+                <div className="flex items-center justify-between border-t border-white/10 pt-4">
+                  <div>
+                    <p className="font-semibold text-white">{project.testimonial.author}</p>
+                    <p className="text-gray-400 text-sm">{project.testimonial.position}</p>
+                  </div>
+                  <div className="text-[#f27d13] text-3xl">★★★★★</div>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* CTA */}
             <div className="pt-4 border-t border-white/10">

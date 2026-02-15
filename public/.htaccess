@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Se a requisição for para um arquivo ou diretório real, deixa passar
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Redireciona todas as outras requisições para index.html
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>

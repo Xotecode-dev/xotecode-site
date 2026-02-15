@@ -3,21 +3,17 @@ import { useEffect, useState } from 'react';
 
 export default function HeroSection() {
   const [isHovering, setIsHovering] = useState(false);
-  // Alterado para um estado mais descritivo
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkDevice = () => {
-      // Verifica se é touch OU se a tela é menor que 1024px (tablet/mobile)
       const hasTouch = window.matchMedia('(pointer: coarse)').matches;
       
       setIsMobile(hasTouch);
     };
 
-    // Executa na montagem
     checkDevice();
 
-    // Listener para mudanças de redimensionamento
     window.addEventListener('resize', checkDevice);
     
     return () => window.removeEventListener('resize', checkDevice);
@@ -35,7 +31,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-5xl mx-auto">
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight tracking-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
             XOTECODE
             <span className="block text-[#80deac] mt-4">
               Ampliando horizontes
@@ -72,7 +68,6 @@ export default function HeroSection() {
             </button>
           </div>
 
-          {/* Indicador de scroll dinâmico */}
           <div className="mt-10">
             <div className="flex flex-col items-center gap-3 select-none">
               <p className="text-gray-400 text-sm">
